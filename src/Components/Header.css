@@ -1,9 +1,29 @@
+.primary {
+    background-color: #1573FE;
+}
+
+.primary-color {
+    color: #1573FE;
+}
+
 .secondary {
     background-color: #1B2028;
 }
 
 .white {
     color: #FFFFFF;
+}
+
+.grey {
+    color: #ffffffa2;
+}
+
+.red {
+    color: red;
+}
+
+.green {
+    color: green;
 }
 
 .bg {
@@ -16,4 +36,17 @@
 
 button {
     background-color: rgba(0, 0, 0, 0);
+}
+
+.padding-right {
+    padding: 0rem 10rem 0rem 0rem;
+}
+
+.padding-left {
+    padding: 0rem 0rem 0rem 1.5rem;
+}
+
+#strategy-head {
+    font-weight: 300 !important;
+    color: #ffffff81;
 }
