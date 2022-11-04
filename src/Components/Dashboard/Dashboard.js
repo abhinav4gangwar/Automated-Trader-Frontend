@@ -8,6 +8,7 @@ import Portfolio from "./Portfolio"
 import Fav from "./Fav"
 import Chart from "./Chart"
 import Strategies from "./Strategies"
+import Transactions from './Transactions';
 
 export default function Dashboard (){
     return(
@@ -21,6 +22,7 @@ export default function Dashboard (){
                 </Col>
                 <Col md={9} className="m-0 p-0">
                 {/* <Row><Chart/></Row> */}
+                <Row fluid='fluid' className='padding-left' style={{margin:"auto"}}><Transactions/></Row>
                 <Row fluid='fluid' className='padding-left' style={{margin:"auto"}}><Strategies/></Row>
                 </Col>
               </Row>

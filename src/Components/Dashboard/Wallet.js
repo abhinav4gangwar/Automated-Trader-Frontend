@@ -16,6 +16,7 @@ export default function Wallet(props){
   const [fName, setFName] = useState("first Name")
   const [lName, setLName] = useState("last Name")
   const [balance, setBalance] = useState(null)
+  const [holdings, setHoldings] = useState(null)
 
 
   useEffect( () =>{
@@ -26,6 +27,7 @@ export default function Wallet(props){
       setFName(res.data.fName)
       setLName(res.data.lName)
       setBalance(res.data.balance)
+      setHoldings(res.data.holdings)
 
 
     }
@@ -43,7 +45,7 @@ export default function Wallet(props){
             </Row>            
             <Row style={{margin:'auto', width:"100%"}} className='mb-3'>
             <Col><h6 className='p-0 white'>Balance</h6><h6 className='grey'>₹{balance}</h6></Col>
-            <Col><h6 className='p-0 white'>Holdings</h6><h6 className='grey'>₹0.00</h6></Col>
+            <Col><h6 className='p-0 white'>Holdings</h6><h6 className='grey'>₹{holdings}</h6></Col>
 
             </Row>
             <Row style={{margin:'auto', width:"100%"}}>

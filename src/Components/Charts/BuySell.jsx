@@ -25,7 +25,8 @@ export default function BuySell (props) {
     const [StockQuantity, setStockQuantity] = useState(null)
 
     const handleBuySubmit = async () => {
-        var orderObj = {type : "buy",
+        var orderObj = {username : props.user,
+                        type : "buy",
                         symbol : props.order.symbol,
                         name : props.order.name,
                         currency : props.order.currency,
@@ -33,11 +34,17 @@ export default function BuySell (props) {
                         price : props.tick.close,
                         date : props.tick.date
         }
-        console.log(orderObj)
+        // console.log(orderObj)
+
+        const res = await Axios.post("http://localhost:3001/api/stock/buy-stock", orderObj)
+
+        console.log(res)
+        
 
     }    
     const handleSellSubmit = async () => {
-        var orderObj = {type : "sell",
+        var orderObj = {username : props.user,
+                        type : "sell",
                         symbol : props.order.symbol,
                         name : props.order.name,
                         currency : props.order.currency,
@@ -45,7 +52,8 @@ export default function BuySell (props) {
                         price : props.tick.close,
                         date : props.tick.date
         }
-        console.log(orderObj)
+        // console.log(orderObj)
+        const res = await Axios.post("http://localhost:3001/api/stock/sell-stock", orderObj)
 
     }
 

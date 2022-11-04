@@ -100,7 +100,7 @@ export default function Register (){
                                 </Form.Group>
         <Row>
         <Col>
-                                        <Button style={{border: "none", borderRadius : 15, fontSize: "0.8rem", }} className='secondary py-3 w-100'>
+                                        <Button href='/login' style={{border: "none", borderRadius : 15, fontSize: "0.8rem", }} className='secondary py-3 w-100'>
                                             Login 
                                         </Button>  
         </Col>                      

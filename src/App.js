@@ -21,7 +21,8 @@ function App() {
           <Route exact path='/transaction' element={<ProSidebarProvider><Header pageName="Transaction"/></ProSidebarProvider>}></Route>
           <Route exact path='/wallet' element={<ProSidebarProvider><Header pageName="Wallet"/></ProSidebarProvider>}></Route>
           <Route exact path='/news' element={<ProSidebarProvider><Header pageName="News"/></ProSidebarProvider>}></Route>
-          <Route exact path='/settings' element={<ProSidebarProvider><Header pageName="Settings"/></ProSidebarProvider>}></Route>
+          <Route exact path='/settings' element={<ProSidebarProvider><Header pageName="Settings"/></ProSidebarProvider>}></Route>        
+          <Route exact path='/feedback' element={<ProSidebarProvider><Header pageName="Feedback"/></ProSidebarProvider>}></Route>
           <Route exact path='/logout' element={<ProSidebarProvider><Header pageName="Logout"/></ProSidebarProvider>}></Route>
         </Routes>
       </Router>

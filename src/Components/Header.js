@@ -18,6 +18,7 @@ import Axios from 'axios'
 import Dashboard from './Dashboard/Dashboard'
 import News from './News/News'
 import Settings from './Settings/Settings'
+import Feedback from './Feedback'
 import Transaction from './Transaction/Transaction'
 import Wallet from './Wallet/Wallet'
 import Charts from './Charts/Charts'
@@ -72,6 +73,7 @@ export default function Header (props) {
             </Menu>
   
               <Menu className='mb-0 pb-0 mt-auto pt-auto'>            
+                <MenuItem href='/feedback' className={pageName==="Feedback" ? "white primary" : "white" } icon={<FaBars/>}>Feedback</MenuItem>                
                 <MenuItem href='/settings' className={pageName==="Settings" ? "white primary" : "white" } icon={<FaBars/>}> Settings</MenuItem>
                 <MenuItem href='/logout' className={pageName==="Logout" ? "white primary" : "white" } icon={<FaBars/>}> Logout</MenuItem>
               </Menu>
@@ -141,7 +143,10 @@ function pageComponent (name){
        return <Wallet/>
       
     case "Settings":
-       return <Settings/>
+       return <Settings/>    
+    
+    case "Feedback":
+       return <Feedback/>
       
     case "Logout":
        AuthService.logout()

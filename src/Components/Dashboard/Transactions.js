@@ -9,7 +9,7 @@ import Table from 'react-bootstrap/Table';
 import AuthService from "../../services/auth.service";
 
 
-export default function Transaction() {
+export default function Transactions() {
 
   const [transactions,setTransactions] = useState({})
 
@@ -30,12 +30,15 @@ export default function Transaction() {
 
 
     return(
-        <Container fluid="fluid">
-            <h3  className='text-center white mb-5'>Transactions</h3>
-            <Row className='row-cols-2 gy-4'>
+        
+            
+          
             <Card  style={{borderRadius: "15px", width :"100%"}} className = 'px-1 py-4 my-2 secondary'>
 
 <Container fluid='fluid' className='p-0'>
+<Row style={{margin:'auto', width:"100%"}} className='mb-4'>
+            <h5 className=' white'>Transactions</h5>
+            </Row> 
 <Row  style={{margin:'auto', width:"100%"}}>
     <Table className='white mb-0' borderless responsive>
 <thead>
@@ -73,9 +76,8 @@ export default function Transaction() {
 
 </Container>
 </Card>
-                
-            </Row>
-        </Container>
+  
+        
 
     )
 }
