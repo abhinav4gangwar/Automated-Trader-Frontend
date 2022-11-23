@@ -58,7 +58,7 @@ export default function Transaction() {
       <td>{item.name}</td>
       <td>{item.order_date}</td>
       <td>{item.stock_date}</td>
-      <td className='green'>{item.type}</td>
+      <td className={item.type === "buy" ? 'green' : "red"}>{item.type}</td>
       <td>{item.price_INR}</td>
       <td>{item.quantity}</td>
       <td>{item.final_price}</td>

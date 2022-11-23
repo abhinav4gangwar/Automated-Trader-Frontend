@@ -20,9 +20,8 @@ import News from './News/News'
 import Settings from './Settings/Settings'
 import Feedback from './Feedback'
 import Transaction from './Transaction/Transaction'
-import Wallet from './Wallet/Wallet'
+import Wallet from './Wallet/WalletPage'
 import Charts from './Charts/Charts'
-import Logout from './Logout'
 
 import AuthService from "../services/auth.service";
 

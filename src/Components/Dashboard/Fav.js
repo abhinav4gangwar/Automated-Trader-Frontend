@@ -27,7 +27,7 @@ export default function Fav() {
 
         const getFav =async () => {
             const res = await Axios.post("http://localhost:3001/api/stock/view-fav",{username: currentUser})
-            setFavList(res.data)
+            setFavList(res.data.slice(1,4))
         }
         getFav()
 
@@ -47,7 +47,7 @@ export default function Fav() {
                         <Col className='col-auto'><Container className='p-0 d-flex justify-content-center align-items-center' fluid={"fluid"} style={{backgroundColor : "#31353F", borderRadius : "10px", height:"85%", width : "3vw"}}><FaRupeeSign size={20} style={{color : "#ffc01e"}}/></Container></Col>
                         <Col>
                         <Row><h6 className='white mb-2'>{fav.name.substring(0, 10)}</h6></Row>
-                        <Row><h6 className='grey' style={{fontSize : "0.9rem"}}>₹ {fav.ltp}</h6></Row>
+                        <Row><h6 className='grey' style={{fontSize : "0.9rem"}}>₹ {formatData(fav.ltp)}</h6></Row>
                         </Col>                    
                         <Col className='col-auto'>
                         <Row auto className='text-end'><h6 style={{fontSize : "0.9rem"}} className= {fav.changePercent >= 0 ? 'green mb-2' : 'red mb-2'}>{formatData(fav.changePercent)}%</h6></Row>
@@ -55,6 +55,7 @@ export default function Fav() {
                         </Col>
                     </Row> )
             })}
+            <Row className='text-end' style={{margin:'auto', width:"100%"}}><a style={{ fontSize : "0.9rem", fontWeight : "500"}} href='/wallet'>Full List</a></Row>
                
 
 

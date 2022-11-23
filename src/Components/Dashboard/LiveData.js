@@ -19,23 +19,23 @@ export default function LiveData() {
 
     useEffect(()=>{
 
-        Axios.get("https://bps-app.herokuapp.com/get-nsei").then( (res) =>{
+        Axios.get("http://localhost:3002/get-nsei").then( (res) =>{
             setNsei({price : res.data.price,
                 changePercent : res.data.changePercent})
         })        
-        Axios.get("https://bps-app.herokuapp.com/get-bsesn").then( (res) =>{
+        Axios.get("http://localhost:3002/get-bsesn").then( (res) =>{
             setBsesn({price : res.data.price,
                 changePercent : res.data.changePercent})
         })        
-        Axios.get("https://bps-app.herokuapp.com/get-ixic").then( (res) =>{
+        Axios.get("http://localhost:3002/get-ixic").then( (res) =>{
             setIxic({price : res.data.price,
                 changePercent : res.data.changePercent})
         })        
-        Axios.get("https://bps-app.herokuapp.com/get-gdaxi").then( (res) =>{
+        Axios.get("http://localhost:3002/get-gdaxi").then( (res) =>{
             setGdaxi({price : res.data.price,
                 changePercent : res.data.changePercent})
         })        
-        Axios.get("https://bps-app.herokuapp.com/get-fchi").then( (res) =>{
+        Axios.get("http://localhost:3002/get-fchi").then( (res) =>{
             setFchi({price : res.data.price,
                 changePercent : res.data.changePercent})
         })

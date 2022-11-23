@@ -19,8 +19,7 @@ export default function Transactions() {
     const currentUser = AuthService.getCurrentUser();
     const getData = async ()=>{
       const res = await Axios.post("http://localhost:3001/api/stock/get-transactions",{username : currentUser})
-      setTransactions(res.data)
-      console.log(res.data)
+      setTransactions(res.data.slice(1,6))
     }
     
     getData()
@@ -61,7 +60,7 @@ export default function Transactions() {
       <td>{item.name}</td>
       <td>{item.order_date}</td>
       <td>{item.stock_date}</td>
-      <td className='green'>{item.type}</td>
+      <td className={item.type === "buy" ? 'green' : "red"}>{item.type}</td>
       <td>{item.price_INR}</td>
       <td>{item.quantity}</td>
       <td>{item.final_price}</td>

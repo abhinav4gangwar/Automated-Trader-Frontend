@@ -27,7 +27,7 @@ export default function Portfolio() {
 
         const getFav =async () => {
             const res = await Axios.post("http://localhost:3001/api/stock/view-portfolio",{username: currentUser})
-            setFavList(res.data.slice(1,4))
+            setFavList(res.data)
         }
         getFav()
 
@@ -46,7 +46,7 @@ export default function Portfolio() {
                 return( <Row style={{margin:'auto', width:"100%"}} className='mb-4'>
                         <Col className='col-auto'><Container className='p-0 d-flex justify-content-center align-items-center' fluid={"fluid"} style={{backgroundColor : "#31353F", borderRadius : "10px", height:"85%", width : "3vw"}}><h6 className='m-0' style={{color : "#ffc01e"}}>{fav.quantity}</h6></Container></Col>
                         <Col>
-                        <Row><h6 className='white mb-2'>{fav.name.substring(0, 10)}</h6></Row>
+                        <Row><h6 className='white mb-2'>{fav.name.substring(0, 20)}</h6></Row>
                         <Row><h6 className='grey' style={{fontSize : "0.9rem"}}>₹ {formatData(fav.ltp)}</h6></Row>
                         </Col>                    
                         <Col className='col-auto'>

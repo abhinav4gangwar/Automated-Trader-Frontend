@@ -15,7 +15,7 @@ export default function News() {
 
     const [newsList, setNewsList] = useState([])
     useEffect(() => {
-        Axios.get("https://bps-app.herokuapp.com/news-update").then(res => [
+        Axios.get("http://localhost:3002/news-update").then(res => [
             setNewsList(res.data.articles)
         ])
     }, []);

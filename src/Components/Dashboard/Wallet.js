@@ -36,7 +36,7 @@ export default function Wallet(props){
   },[])
 
     return(
-        <Card className='px-1 py-3 mt-2 mb-3' style={{borderRadius: "15px", backgroundImage:"url(/dashboard/images/wallet-bg.png)"
+        <Card className='px-1 py-3 mt-2 mb-3' style={{borderRadius: "15px", backgroundImage:"url(/dashboard/images/wallet-bg.png)", backgroundSize: "cover"
           }}> 
           <Container fluid='fluid' className='p-0'>
             <Row style={{margin:'auto', width:"100%"}} className='mb-4'>
